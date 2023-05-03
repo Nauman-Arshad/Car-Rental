@@ -17,6 +17,11 @@
             <li><%= link_to  "Blog", website_blog_path, class: "nav-link"  %></li>
             <li><%= link_to  "About", website_about_path, class: "nav-link"  %></li>
             <li><%= link_to  "Contact", website_contact_path, class: "nav-link"  %></li>
+            <% if user_signed_in? %>
+              <li><%= button_to "Sign Out", destroy_user_session_path, class: "nav-link btn btn-outline-danger" ,   method: :delete %></li>
+            <% else %>
+              <li><%= link_to "Member Ship".html_safe, new_user_session_path, class: " btn btn-success text-white py-2 p-2" %></li>
+            <% end %>
           </ul>
         </nav>
       </div>

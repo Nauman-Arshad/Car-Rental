@@ -70,3 +70,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
 end
+
+gem 'activeadmin', github: 'activeadmin/activeadmin', branch: 'master'
+gem 'sassc'
+gem 'devise'

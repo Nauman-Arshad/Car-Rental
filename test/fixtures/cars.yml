@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  model: 1
+  year: 1
+  transmission: MyString
+  seats: 1
+  price: 1.5
+  category: one
+
+two:
+  model: 1
+  year: 1
+  transmission: MyString
+  seats: 1
+  price: 1.5
+  category: two
