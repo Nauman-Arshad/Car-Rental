@@ -1,5 +1,6 @@
 /*
  *= require_self
+ *= require bootstrap-datepicker3
  */
 @import "active_admin.scss";
 @import "fonts/icomoon/style.css";

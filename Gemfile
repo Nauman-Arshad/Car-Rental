@@ -74,3 +74,4 @@ end
 gem 'activeadmin', github: 'activeadmin/activeadmin', branch: 'master'
 gem 'sassc'
 gem 'devise'
+gem 'bootstrap-datepicker-rails'

@@ -83,7 +83,7 @@ ActiveAdmin.setup do |config|
 
   # In case you prefer Pundit over other solutions you can here pass
   # the name of default policy class. This policy will be used in every
-  # case when Pundit is unable to find suitable policy.
+  # case when Pundit is unable to home suitable policy.
   # config.pundit_default_policy = "MyDefaultPunditPolicy"
 
   # If you wish to maintain a separate set of Pundit policies for admin
