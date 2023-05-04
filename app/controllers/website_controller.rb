@@ -3,6 +3,7 @@ class WebsiteController < ApplicationController
   end
 
   def listing
+    @cars = Car.all
   end
 
   def about

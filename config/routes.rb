@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
   resources :booking, only: [:home, :show]
+  resources :credit_infos, only: [:new, :create, :show]
   get '/booking/show', to: 'booking#show', as: 'show_booking'
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

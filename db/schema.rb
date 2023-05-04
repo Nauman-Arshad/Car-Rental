@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_05_03_210547) do
+ActiveRecord::Schema[7.0].define(version: 2023_05_04_020423) do
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
     t.text "body"
@@ -70,6 +70,10 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_03_210547) do
     t.datetime "drop"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.string "user_name"
+    t.string "user_email"
+    t.string "user_phone"
+    t.integer "status"
   end
 
   create_table "cars", force: :cascade do |t|
@@ -86,6 +90,19 @@ ActiveRecord::Schema[7.0].define(version: 2023_05_03_210547) do
 
   create_table "categories", force: :cascade do |t|
     t.string "car_type"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "credit_infos", force: :cascade do |t|
+    t.string "name"
+    t.string "email"
+    t.string "phone"
+    t.string "payment"
+    t.string "card_name"
+    t.string "credit_number"
+    t.datetime "expiration"
+    t.integer "cvv"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end

@@ -1,0 +1,105 @@
+<!-- Credit card form -->
+<style>
+    @media (min-width: 1200px) {
+        .larger {
+            margin-top: 100px;
+        }
+    }
+</style>
+<div class="container mt-4">
+  <section class="larger">
+    <div class="row mt-4 " style="justify-content: center">
+      <div class="col-md-8 mb-2  py-2" style="border: none">
+        <div class="card mb-2">
+          <div class="card-header py-3">
+            <h5 class="mb-0">Biling details</h5>
+          </div>
+          <div class="card-body">
+            <%= form_with(model: @credit_info, url: credit_infos_path, class: "trip-form") do |form| %>
+
+
+              <div class="form-outline mb-2">
+                <%= form.label :name, class: "form-label" %>
+                <%= form.text_field :name, id: "formCardName", class: "form-control" %>
+              </div>
+
+              <!-- Email input -->
+              <div class="form-outline mb-2">
+                <%= form.label :email, class: "form-label" %>
+                <%= form.text_field :email, id: "formCardEmail", class: "form-control" %>
+              </div>
+
+
+              <!-- Number input -->
+              <div class="form-outline mb-2">
+                <%= form.label :phone, class: "form-label" %>
+                <%= form.number_field :phone, id: "formCardEmail", class: "form-control" %>
+              </div>
+
+              <hr class="my-4"/>
+
+              <h5 class="mb-2">Payment</h5>
+
+              <div class="form-check">
+                <%= form.radio_button :payment, "credit_card", id: "checkoutForm3", checked: true, class: "form-check-input" %>
+                <label class="form-check-label" for="checkoutForm3">
+                  Credit card
+                </label>
+              </div>
+
+              <div class="form-check">
+                <%= form.radio_button :payment, "debit_card", id: "checkoutForm4", class: "form-check-input" %>
+                <label class="form-check-label" for="checkoutForm4">
+                  Debit card
+                </label>
+              </div>
+
+              <div class="form-check mb-2">
+                <%= form.radio_button :payment, "paypal", id: "checkoutForm5", class: "form-check-input" %>
+                <label class="form-check-label" for="checkoutForm5">
+                  Paypal
+                </label>
+              </div>
+
+
+              <div class="row mb-2">
+                <div class="col">
+                  <div class="form-outline">
+                    <%= form.label :card_name, class: "form-label" %>
+                    <%= form.text_field :card_name, id: "formCardName", class: "form-control" %>
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-outline">
+                    <%= form.label :credit_number, class: "form-label" %>
+                    <%= form.number_field :credit_number, id: "formCardName", class: "form-control" %>
+                  </div>
+                </div>
+              </div>
+
+              <div class="row mb-2">
+                <div class="col-3">
+                  <div class="form-outline">
+                    <%= form.date_field :expiration, id: "formCardName", class: "form-control" %>
+                    <%= form.label :expiration, class: "form-label" %>
+                  </div>
+                </div>
+                <div class="col-3">
+                  <div class="form-outline">
+                    <%= form.number_field :cvv, id: "formCardName", class: "form-control" %>
+                    <%= form.label :cvv, class: "form-label" %>
+                  </div>
+                </div>
+              </div>
+
+              <div class="actions">
+                <%= form.submit "Continue to Reserve", class: "btn btn-primary btn-lg btn-block" %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- Credit card form -->
