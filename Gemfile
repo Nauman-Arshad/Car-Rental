@@ -76,3 +76,7 @@ gem 'sassc'
 gem 'devise'
 gem 'bootstrap-datepicker-rails'
 gem "byebug"
+
+gem "dockerfile-rails", ">= 1.2", :group => :development
+
+gem "pg", "~> 1.5"
