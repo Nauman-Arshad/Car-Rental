@@ -15,9 +15,7 @@
             <h5 class="mb-0">Biling details</h5>
           </div>
           <div class="card-body">
-            <%= form_with(model: @credit_info, url: credit_infos_path, class: "trip-form") do |form| %>
-
-
+            <%= form_with model: @credit_info, url: credit_infos_path(car_id: params[:car_id]), method: :post do |form| %>
               <div class="form-outline mb-2">
                 <%= form.label :name, class: "form-label" %>
                 <%= form.text_field :name, id: "formCardName", class: "form-control" %>
