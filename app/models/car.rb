@@ -4,12 +4,9 @@ class Car < ApplicationRecord
   has_many :bookings
   has_many :pricing_rules
 
-  def price_for_dates(start_date, end_date)
-    pricing_rule = pricing_rules.where("start_date <= ? AND end_date >= ?", end_date, start_date).first
-    if pricing_rule.present?
-      self.price + pricing_rule.price
-    else
-      self.price
-    end
+  def current_price
+    today = Date.today
+    price_rule = PricingRule.where('start_date <= ? AND end_date >= ?', today, today).first
+    price_rule ? price_rule.price : price
   end
 end
